@@ -13,6 +13,9 @@ int main() {
 	en.Insert(3);
 	en.Insert(2);
 	en.out();
+	en.remove(4);
+	cout << "AfterRemove" << endl;
+	en.out();
 	system("PAUSE");
 
 }

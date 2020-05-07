@@ -58,7 +58,21 @@ int Planty<T>::Insert(T a)
 template<class T>
 int Planty<T>::remove(T a)
 {
-	
+	Node *cur = first;
+	if (cur == NULL)
+		return 0;
+	while (cur->next) {
+		if (cur->data == a) {
+			if (cur->previous)
+				cur->previous->next = cur->next;
+			if (cur->next)
+				cur->next->previous = cur->previous;
+			delete cur;
+			break;
+		}
+		cur = cur->next;
+	}
+	return 1;
 }
 
 template<class T>
