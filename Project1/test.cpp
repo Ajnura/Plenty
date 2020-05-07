@@ -6,5 +6,13 @@
 
 int main() {
 
+	Planty<int> en;
+	en.Insert(1);
+	en.Insert(4);
+	en.Insert(2);
+	en.Insert(3);
+	en.Insert(2);
+	en.out();
+	system("PAUSE");
 
 }
